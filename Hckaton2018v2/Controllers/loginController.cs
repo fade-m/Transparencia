@@ -11,7 +11,7 @@ namespace Hckaton2018v2.Controllers
         // GET: login
         public ActionResult Index()
         {
-            return View("login");
+            return View();
         }
     }
 }
