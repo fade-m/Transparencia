@@ -1,42 +1,43 @@
 ﻿@model Hckaton2018v2.estado
 
-@{
-    Layout = null;
-}
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
+                <div>
+                    <div class="form-horizontal">
+                        <div class="page-header text-center">
+                            <h1 style="color:#f3f3ff">Estados</h1>
+                        </div>
+                        <hr />
+                        <dl class="dl-horizontal h5">
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.nombre)
+                            </dt>
 
-<!DOCTYPE html>
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.nombre)
+                            </dd>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <div>
-        <h4>estado</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.nombre)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.nombre)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.poblacion)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.poblacion)
-            </dd>
-    
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.idEstado }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</body>
-</html>
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.poblacion)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.poblacion)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p class="h5">
+                        @Html.ActionLink("Editar", "Edit", new { id = Model.idEstado }) |
+                        @Html.ActionLink("Regresar", "Index")
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+</section>
+
