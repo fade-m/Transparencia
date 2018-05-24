@@ -1,0 +1,58 @@
+﻿@model Hckaton2018v2.propuestas
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>propuestas</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.descripcion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.archivo.ruta)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.archivo.ruta)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.candidato.idCandidato)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.candidato.idCandidato)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.tipoPropuesta.tipoPropuesta1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.tipoPropuesta.tipoPropuesta1)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idPropuesta }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

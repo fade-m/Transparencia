@@ -1,0 +1,98 @@
+﻿@model Hckaton2018v2.persona
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>persona</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nombre)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.apPaterno)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.apPaterno)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.apMaterno)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.apMaterno)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.direccion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.direccion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.fechaNacimiento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.fechaNacimiento)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.cp)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.cp)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.genero)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.genero)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.estado.nombre)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.estado.nombre)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.usuario.usuario1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.usuario.usuario1)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idPersona }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

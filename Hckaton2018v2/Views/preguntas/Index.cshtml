@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Hckaton2018v2.pregunta>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pregunta1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.votosPositivos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.votosNegativos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.respuesta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.candidato.idCandidato)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pregunta1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.votosPositivos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.votosNegativos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.respuesta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.candidato.idCandidato)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idPregunta }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idPregunta }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idPregunta })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

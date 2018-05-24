@@ -1,0 +1,96 @@
+﻿@model Hckaton2018v2.egreso
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>egreso</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.cantidad)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.cantidad)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.descripcion)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.votosPositivos)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.votosPositivos)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.votosNegativos)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.votosNegativos)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.latitud)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.latitud)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.longitud)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.longitud)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.archivo.ruta)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.archivo.ruta)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.presupuesto.idPresupuesto)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.presupuesto.idPresupuesto)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

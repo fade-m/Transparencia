@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Hckaton2018v2.candidato>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.partidoPolitico.nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.presupuesto.idPresupuesto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipoCandidato.tipoCandidato1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.usuario.usuario1)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.partidoPolitico.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.presupuesto.idPresupuesto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipoCandidato.tipoCandidato1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.usuario.usuario1)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idCandidato }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idCandidato }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idCandidato })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

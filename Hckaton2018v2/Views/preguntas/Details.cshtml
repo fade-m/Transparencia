@@ -1,0 +1,74 @@
+﻿@model Hckaton2018v2.pregunta
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>pregunta</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nombre)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.pregunta1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.pregunta1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.votosPositivos)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.votosPositivos)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.votosNegativos)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.votosNegativos)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.respuesta)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.respuesta)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.candidato.idCandidato)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.candidato.idCandidato)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idPregunta }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
