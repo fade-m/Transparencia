@@ -1,48 +1,48 @@
 ﻿@model Hckaton2018v2.presupuesto
 
-@{
-    Layout = null;
-}
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
 
-<!DOCTYPE html>
+                <div class="page-header text-center">
+                    <h1 style="color:#f3f3ff">Estados</h1>
+                </div>
+                <h3 style="color:#f3f3ff">¿Deseas eliminar el registro?</h3>
+                <div>
+                    <h4>presupuesto</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt class="text-capitalize font-weight-bold">
+                            @Html.DisplayNameFor(model => model.prepTotal)
+                        </dt>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Delete</title>
-</head>
-<body>
-    <h3>Are you sure you want to delete this?</h3>
-    <div>
-        <h4>presupuesto</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.prepTotal)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.prepTotal)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.estado.nombre)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.estado.nombre)
-            </dd>
-    
-        </dl>
-    
-        @using (Html.BeginForm()) {
-            @Html.AntiForgeryToken()
-    
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
+                        <dd>
+                            @Html.DisplayFor(model => model.prepTotal)
+                        </dd>
+
+                        <dt class="text-capitalize font-weight-bold">
+                            @Html.DisplayNameFor(model => model.estado.nombre)
+                        </dt>
+
+                        <dd class="text-light">
+                            @Html.DisplayFor(model => model.estado.nombre)
+                        </dd>
+
+                    </dl>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="h5">
+                            <input type="submit" value="Eliminar" class="btn btn-warning" /> |
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    }
+                </div>
+
             </div>
-        }
+        </div>
     </div>
-</body>
-</html>
+</section>

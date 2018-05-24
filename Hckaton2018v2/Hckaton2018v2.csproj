@@ -210,6 +210,7 @@
     <Compile Include="Controllers\egresoesController.cs" />
     <Compile Include="Controllers\estadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\partidoPoliticoController.cs" />
     <Compile Include="Controllers\personasController.cs" />
@@ -491,6 +492,7 @@
     <Content Include="Views\usuarios\Details.cshtml" />
     <Content Include="Views\usuarios\Edit.cshtml" />
     <Content Include="Views\usuarios\Index.cshtml" />
+    <Content Include="Views\login\login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
