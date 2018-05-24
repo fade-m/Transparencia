@@ -1,41 +1,44 @@
 ﻿@model IEnumerable<Hckaton2018v2.partidoPolitico>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Partidos Politicos";
 }
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 col-md">
+                <div class="wellcome-heading">
+                    <p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.nombre)
+                            </th>
+                            <th></th>
+                        </tr>
 
-<!DOCTYPE html>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nombre)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.idPartido }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.idPartido }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.idPartido })
+                                </td>
+                            </tr>
+                        }
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.nombre)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.nombre)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.idPartido }) |
-                @Html.ActionLink("Details", "Details", new { id=item.idPartido }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.idPartido })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+

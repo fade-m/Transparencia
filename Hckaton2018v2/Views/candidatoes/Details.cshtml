@@ -1,58 +1,58 @@
 ﻿@model Hckaton2018v2.candidato
 
-@{
-    Layout = null;
-}
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
+                <div>
+                    <div class="form-horizontal">
+                        <div class="page-header text-center">
+                            <h1 style="color:#f3f3ff">Estados</h1>
+                        </div>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.partidoPolitico.nombre)
+                            </dt>
 
-<!DOCTYPE html>
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.partidoPolitico.nombre)
+                            </dd>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <div>
-        <h4>candidato</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.partidoPolitico.nombre)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.partidoPolitico.nombre)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.presupuesto.idPresupuesto)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.presupuesto.idPresupuesto)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.tipoCandidato.tipoCandidato1)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.tipoCandidato.tipoCandidato1)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.usuario.usuario1)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.usuario.usuario1)
-            </dd>
-    
-        </dl>
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.presupuesto.idPresupuesto)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.presupuesto.idPresupuesto)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.tipoCandidato.tipoCandidato1)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.tipoCandidato.tipoCandidato1)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.usuario.usuario1)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.usuario.usuario1)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p>
+                        @Html.ActionLink("Editar", "Edit", new { id = Model.idCandidato }) |
+                        @Html.ActionLink("Regresar", "Index")
+                    </p>
+
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.idCandidato }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</body>
-</html>
+</section>

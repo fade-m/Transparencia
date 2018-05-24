@@ -1,59 +1,65 @@
 ﻿@model IEnumerable<Hckaton2018v2.candidato>
 
-@{
-    Layout = null;
-}
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
 
-<!DOCTYPE html>
+                <div class="page-header text-center">
+                    <h1 style="color:#f3f3ff">Candidatos</h1>
+                </div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.partidoPolitico.nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.presupuesto.idPresupuesto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tipoCandidato.tipoCandidato1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.usuario.usuario1)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.partidoPolitico.nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.presupuesto.idPresupuesto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.tipoCandidato.tipoCandidato1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.usuario.usuario1)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.idCandidato }) |
-                @Html.ActionLink("Details", "Details", new { id=item.idCandidato }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.idCandidato })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+
+                <br>
+                <p>
+                    @Html.ActionLink("Nuevo Candidato", "Create")
+                </p>
+                <table class="table table-hover text-center h4">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Presupuesto
+                            </th>
+                            <th>
+                                Tipo de candidato
+                            </th>
+                            <th>
+                                Usuario
+                            </th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.partidoPolitico.nombre)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.presupuesto.idPresupuesto)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.tipoCandidato.tipoCandidato1)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.usuario.usuario1)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.idCandidato }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.idCandidato }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.idCandidato })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>
