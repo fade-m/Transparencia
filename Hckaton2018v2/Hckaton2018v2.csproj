@@ -246,6 +246,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\candidatos\presidencia\AMLO.png" />
+    <Content Include="images\candidatos\presidencia\ANAYA.png" />
+    <Content Include="images\candidatos\presidencia\bronco.png" />
+    <Content Include="images\candidatos\presidencia\MEADE.png" />
     <Content Include="images\partidos\independiente.jpg" />
     <Content Include="images\partidos\morena.png" />
     <Content Include="images\partidos\movimiento_ciudadano.png" />
@@ -326,6 +330,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_PartidosPoliticos.cshtml" />
+    <Content Include="Views\Shared\_PrincipalesCandidatos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
