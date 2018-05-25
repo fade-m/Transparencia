@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="db_transparenciaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="db_transparenciaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="archivo">
           <Key>
             <PropertyRef Name="idArchivo" />
@@ -136,7 +136,7 @@
           <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="25" Nullable="false" />
         </EntityType>
-        <Association Name="FK__candidato__idPar__6754599E">
+        <Association Name="FK__candidato__idPar__412EB0B6">
           <End Role="partidoPolitico" Type="Self.partidoPolitico" Multiplicity="1" />
           <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
           <ReferentialConstraint>
@@ -148,7 +148,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__candidato__idPre__6B24EA82">
+        <Association Name="FK__candidato__idPre__44FF419A">
           <End Role="presupuesto" Type="Self.presupuesto" Multiplicity="1" />
           <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
           <ReferentialConstraint>
@@ -160,7 +160,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__candidato__idTip__6A30C649">
+        <Association Name="FK__candidato__idTip__440B1D61">
           <End Role="tipoCandidato" Type="Self.tipoCandidato" Multiplicity="1" />
           <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
           <ReferentialConstraint>
@@ -172,7 +172,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__candidato__idUsu__6383C8BA">
+        <Association Name="FK__candidato__idUsu__3D5E1FD2">
           <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
           <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
           <ReferentialConstraint>
@@ -184,7 +184,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__egreso__idArchiv__6E01572D">
+        <Association Name="FK__egreso__idArchiv__47DBAE45">
           <End Role="archivo" Type="Self.archivo" Multiplicity="1" />
           <End Role="egreso" Type="Self.egreso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -196,7 +196,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__egreso__idPresup__6D0D32F4">
+        <Association Name="FK__egreso__idPresup__46E78A0C">
           <End Role="presupuesto" Type="Self.presupuesto" Multiplicity="1" />
           <End Role="egreso" Type="Self.egreso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -208,7 +208,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__persona__idEstad__656C112C">
+        <Association Name="FK__persona__idEstad__3F466844">
           <End Role="estado" Type="Self.estado" Multiplicity="1" />
           <End Role="persona" Type="Self.persona" Multiplicity="*" />
           <ReferentialConstraint>
@@ -220,7 +220,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__persona__idUsuar__628FA481">
+        <Association Name="FK__persona__idUsuar__3C69FB99">
           <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
           <End Role="persona" Type="Self.persona" Multiplicity="*" />
           <ReferentialConstraint>
@@ -232,7 +232,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__pregunta__idCand__68487DD7">
+        <Association Name="FK__pregunta__idCand__4222D4EF">
           <End Role="candidato" Type="Self.candidato" Multiplicity="1" />
           <End Role="pregunta" Type="Self.pregunta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -244,7 +244,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__presupues__idEst__66603565">
+        <Association Name="FK__presupues__idEst__403A8C7D">
           <End Role="estado" Type="Self.estado" Multiplicity="1" />
           <End Role="presupuesto" Type="Self.presupuesto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -256,7 +256,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__programas__idPre__6C190EBB">
+        <Association Name="FK__programas__idPre__45F365D3">
           <End Role="presupuesto" Type="Self.presupuesto" Multiplicity="1" />
           <End Role="programasIngreso" Type="Self.programasIngreso" Multiplicity="*" />
           <ReferentialConstraint>
@@ -268,7 +268,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__propuesta__idArc__6EF57B66">
+        <Association Name="FK__propuesta__idArc__48CFD27E">
           <End Role="archivo" Type="Self.archivo" Multiplicity="1" />
           <End Role="propuestas" Type="Self.propuestas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -280,7 +280,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__propuesta__idCan__693CA210">
+        <Association Name="FK__propuesta__idCan__4316F928">
           <End Role="candidato" Type="Self.candidato" Multiplicity="1" />
           <End Role="propuestas" Type="Self.propuestas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -292,7 +292,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__propuesta__idTip__6FE99F9F">
+        <Association Name="FK__propuesta__idTip__49C3F6B7">
           <End Role="tipoPropuesta" Type="Self.tipoPropuesta" Multiplicity="1" />
           <End Role="propuestas" Type="Self.propuestas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -304,7 +304,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__usuario__idTipoU__6477ECF3">
+        <Association Name="FK__usuario__idTipoU__3E52440B">
           <End Role="tipoUsuario" Type="Self.tipoUsuario" Multiplicity="1" />
           <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -331,155 +331,80 @@
           <EntitySet Name="tipoPropuesta" EntityType="Self.tipoPropuesta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tipoUsuario" EntityType="Self.tipoUsuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__candidato__idPar__6754599E" Association="Self.FK__candidato__idPar__6754599E">
+          <AssociationSet Name="FK__candidato__idPar__412EB0B6" Association="Self.FK__candidato__idPar__412EB0B6">
             <End Role="partidoPolitico" EntitySet="partidoPolitico" />
             <End Role="candidato" EntitySet="candidato" />
           </AssociationSet>
-          <AssociationSet Name="FK__candidato__idPre__6B24EA82" Association="Self.FK__candidato__idPre__6B24EA82">
+          <AssociationSet Name="FK__candidato__idPre__44FF419A" Association="Self.FK__candidato__idPre__44FF419A">
             <End Role="presupuesto" EntitySet="presupuesto" />
             <End Role="candidato" EntitySet="candidato" />
           </AssociationSet>
-          <AssociationSet Name="FK__candidato__idTip__6A30C649" Association="Self.FK__candidato__idTip__6A30C649">
+          <AssociationSet Name="FK__candidato__idTip__440B1D61" Association="Self.FK__candidato__idTip__440B1D61">
             <End Role="tipoCandidato" EntitySet="tipoCandidato" />
             <End Role="candidato" EntitySet="candidato" />
           </AssociationSet>
-          <AssociationSet Name="FK__candidato__idUsu__6383C8BA" Association="Self.FK__candidato__idUsu__6383C8BA">
+          <AssociationSet Name="FK__candidato__idUsu__3D5E1FD2" Association="Self.FK__candidato__idUsu__3D5E1FD2">
             <End Role="usuario" EntitySet="usuario" />
             <End Role="candidato" EntitySet="candidato" />
           </AssociationSet>
-          <AssociationSet Name="FK__egreso__idArchiv__6E01572D" Association="Self.FK__egreso__idArchiv__6E01572D">
+          <AssociationSet Name="FK__egreso__idArchiv__47DBAE45" Association="Self.FK__egreso__idArchiv__47DBAE45">
             <End Role="archivo" EntitySet="archivo" />
             <End Role="egreso" EntitySet="egreso" />
           </AssociationSet>
-          <AssociationSet Name="FK__egreso__idPresup__6D0D32F4" Association="Self.FK__egreso__idPresup__6D0D32F4">
+          <AssociationSet Name="FK__egreso__idPresup__46E78A0C" Association="Self.FK__egreso__idPresup__46E78A0C">
             <End Role="presupuesto" EntitySet="presupuesto" />
             <End Role="egreso" EntitySet="egreso" />
           </AssociationSet>
-          <AssociationSet Name="FK__persona__idEstad__656C112C" Association="Self.FK__persona__idEstad__656C112C">
+          <AssociationSet Name="FK__persona__idEstad__3F466844" Association="Self.FK__persona__idEstad__3F466844">
             <End Role="estado" EntitySet="estado" />
             <End Role="persona" EntitySet="persona" />
           </AssociationSet>
-          <AssociationSet Name="FK__persona__idUsuar__628FA481" Association="Self.FK__persona__idUsuar__628FA481">
+          <AssociationSet Name="FK__persona__idUsuar__3C69FB99" Association="Self.FK__persona__idUsuar__3C69FB99">
             <End Role="usuario" EntitySet="usuario" />
             <End Role="persona" EntitySet="persona" />
           </AssociationSet>
-          <AssociationSet Name="FK__pregunta__idCand__68487DD7" Association="Self.FK__pregunta__idCand__68487DD7">
+          <AssociationSet Name="FK__pregunta__idCand__4222D4EF" Association="Self.FK__pregunta__idCand__4222D4EF">
             <End Role="candidato" EntitySet="candidato" />
             <End Role="pregunta" EntitySet="pregunta" />
           </AssociationSet>
-          <AssociationSet Name="FK__presupues__idEst__66603565" Association="Self.FK__presupues__idEst__66603565">
+          <AssociationSet Name="FK__presupues__idEst__403A8C7D" Association="Self.FK__presupues__idEst__403A8C7D">
             <End Role="estado" EntitySet="estado" />
             <End Role="presupuesto" EntitySet="presupuesto" />
           </AssociationSet>
-          <AssociationSet Name="FK__programas__idPre__6C190EBB" Association="Self.FK__programas__idPre__6C190EBB">
+          <AssociationSet Name="FK__programas__idPre__45F365D3" Association="Self.FK__programas__idPre__45F365D3">
             <End Role="presupuesto" EntitySet="presupuesto" />
             <End Role="programasIngreso" EntitySet="programasIngreso" />
           </AssociationSet>
-          <AssociationSet Name="FK__propuesta__idArc__6EF57B66" Association="Self.FK__propuesta__idArc__6EF57B66">
+          <AssociationSet Name="FK__propuesta__idArc__48CFD27E" Association="Self.FK__propuesta__idArc__48CFD27E">
             <End Role="archivo" EntitySet="archivo" />
             <End Role="propuestas" EntitySet="propuestas" />
           </AssociationSet>
-          <AssociationSet Name="FK__propuesta__idCan__693CA210" Association="Self.FK__propuesta__idCan__693CA210">
+          <AssociationSet Name="FK__propuesta__idCan__4316F928" Association="Self.FK__propuesta__idCan__4316F928">
             <End Role="candidato" EntitySet="candidato" />
             <End Role="propuestas" EntitySet="propuestas" />
           </AssociationSet>
-          <AssociationSet Name="FK__propuesta__idTip__6FE99F9F" Association="Self.FK__propuesta__idTip__6FE99F9F">
+          <AssociationSet Name="FK__propuesta__idTip__49C3F6B7" Association="Self.FK__propuesta__idTip__49C3F6B7">
             <End Role="tipoPropuesta" EntitySet="tipoPropuesta" />
             <End Role="propuestas" EntitySet="propuestas" />
           </AssociationSet>
-          <AssociationSet Name="FK__usuario__idTipoU__6477ECF3" Association="Self.FK__usuario__idTipoU__6477ECF3">
+          <AssociationSet Name="FK__usuario__idTipoU__3E52440B" Association="Self.FK__usuario__idTipoU__3E52440B">
             <End Role="tipoUsuario" EntitySet="tipoUsuario" />
             <End Role="usuario" EntitySet="usuario" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_transparenciaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="db_transparenciaEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="archivo" EntityType="db_transparenciaModel.archivo" />
-          <EntitySet Name="candidato" EntityType="db_transparenciaModel.candidato" />
-          <EntitySet Name="egreso" EntityType="db_transparenciaModel.egreso" />
-          <EntitySet Name="estado" EntityType="db_transparenciaModel.estado" />
-          <EntitySet Name="partidoPolitico" EntityType="db_transparenciaModel.partidoPolitico" />
-          <EntitySet Name="persona" EntityType="db_transparenciaModel.persona" />
-          <EntitySet Name="pregunta" EntityType="db_transparenciaModel.pregunta" />
-          <EntitySet Name="presupuesto" EntityType="db_transparenciaModel.presupuesto" />
-          <EntitySet Name="programasIngreso" EntityType="db_transparenciaModel.programasIngreso" />
-          <EntitySet Name="propuestas" EntityType="db_transparenciaModel.propuestas" />
-          <EntitySet Name="tipoCandidato" EntityType="db_transparenciaModel.tipoCandidato" />
-          <EntitySet Name="tipoPropuesta" EntityType="db_transparenciaModel.tipoPropuesta" />
-          <EntitySet Name="tipoUsuario" EntityType="db_transparenciaModel.tipoUsuario" />
-          <EntitySet Name="usuario" EntityType="db_transparenciaModel.usuario" />
-          <AssociationSet Name="FK__egreso__idArchiv__6E01572D" Association="db_transparenciaModel.FK__egreso__idArchiv__6E01572D">
-            <End Role="archivo" EntitySet="archivo" />
-            <End Role="egreso" EntitySet="egreso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__propuesta__idArc__6EF57B66" Association="db_transparenciaModel.FK__propuesta__idArc__6EF57B66">
-            <End Role="archivo" EntitySet="archivo" />
-            <End Role="propuestas" EntitySet="propuestas" />
-          </AssociationSet>
-          <AssociationSet Name="FK__candidato__idPar__6754599E" Association="db_transparenciaModel.FK__candidato__idPar__6754599E">
-            <End Role="partidoPolitico" EntitySet="partidoPolitico" />
-            <End Role="candidato" EntitySet="candidato" />
-          </AssociationSet>
-          <AssociationSet Name="FK__candidato__idPre__6B24EA82" Association="db_transparenciaModel.FK__candidato__idPre__6B24EA82">
-            <End Role="presupuesto" EntitySet="presupuesto" />
-            <End Role="candidato" EntitySet="candidato" />
-          </AssociationSet>
-          <AssociationSet Name="FK__candidato__idTip__6A30C649" Association="db_transparenciaModel.FK__candidato__idTip__6A30C649">
-            <End Role="tipoCandidato" EntitySet="tipoCandidato" />
-            <End Role="candidato" EntitySet="candidato" />
-          </AssociationSet>
-          <AssociationSet Name="FK__candidato__idUsu__6383C8BA" Association="db_transparenciaModel.FK__candidato__idUsu__6383C8BA">
-            <End Role="usuario" EntitySet="usuario" />
-            <End Role="candidato" EntitySet="candidato" />
-          </AssociationSet>
-          <AssociationSet Name="FK__pregunta__idCand__68487DD7" Association="db_transparenciaModel.FK__pregunta__idCand__68487DD7">
-            <End Role="candidato" EntitySet="candidato" />
-            <End Role="pregunta" EntitySet="pregunta" />
-          </AssociationSet>
-          <AssociationSet Name="FK__propuesta__idCan__693CA210" Association="db_transparenciaModel.FK__propuesta__idCan__693CA210">
-            <End Role="candidato" EntitySet="candidato" />
-            <End Role="propuestas" EntitySet="propuestas" />
-          </AssociationSet>
-          <AssociationSet Name="FK__egreso__idPresup__6D0D32F4" Association="db_transparenciaModel.FK__egreso__idPresup__6D0D32F4">
-            <End Role="presupuesto" EntitySet="presupuesto" />
-            <End Role="egreso" EntitySet="egreso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__persona__idEstad__656C112C" Association="db_transparenciaModel.FK__persona__idEstad__656C112C">
-            <End Role="estado" EntitySet="estado" />
-            <End Role="persona" EntitySet="persona" />
-          </AssociationSet>
-          <AssociationSet Name="FK__presupues__idEst__66603565" Association="db_transparenciaModel.FK__presupues__idEst__66603565">
-            <End Role="estado" EntitySet="estado" />
-            <End Role="presupuesto" EntitySet="presupuesto" />
-          </AssociationSet>
-          <AssociationSet Name="FK__persona__idUsuar__628FA481" Association="db_transparenciaModel.FK__persona__idUsuar__628FA481">
-            <End Role="usuario" EntitySet="usuario" />
-            <End Role="persona" EntitySet="persona" />
-          </AssociationSet>
-          <AssociationSet Name="FK__programas__idPre__6C190EBB" Association="db_transparenciaModel.FK__programas__idPre__6C190EBB">
-            <End Role="presupuesto" EntitySet="presupuesto" />
-            <End Role="programasIngreso" EntitySet="programasIngreso" />
-          </AssociationSet>
-          <AssociationSet Name="FK__propuesta__idTip__6FE99F9F" Association="db_transparenciaModel.FK__propuesta__idTip__6FE99F9F">
-            <End Role="tipoPropuesta" EntitySet="tipoPropuesta" />
-            <End Role="propuestas" EntitySet="propuestas" />
-          </AssociationSet>
-          <AssociationSet Name="FK__usuario__idTipoU__6477ECF3" Association="db_transparenciaModel.FK__usuario__idTipoU__6477ECF3">
-            <End Role="tipoUsuario" EntitySet="tipoUsuario" />
-            <End Role="usuario" EntitySet="usuario" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="archivo">
           <Key>
             <PropertyRef Name="idArchivo" />
           </Key>
           <Property Name="idArchivo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ruta" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="egreso" Relationship="db_transparenciaModel.FK__egreso__idArchiv__6E01572D" FromRole="archivo" ToRole="egreso" />
-          <NavigationProperty Name="propuestas" Relationship="db_transparenciaModel.FK__propuesta__idArc__6EF57B66" FromRole="archivo" ToRole="propuestas" />
+          <Property Name="ruta" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="egreso" Relationship="Self.FK__egreso__idArchiv__47DBAE45" FromRole="archivo" ToRole="egreso" />
+          <NavigationProperty Name="propuestas" Relationship="Self.FK__propuesta__idArc__48CFD27E" FromRole="archivo" ToRole="propuestas" />
         </EntityType>
         <EntityType Name="candidato">
           <Key>
@@ -490,12 +415,12 @@
           <Property Name="idUsuario" Type="Int32" Nullable="false" />
           <Property Name="idTipoCandidato" Type="Int32" Nullable="false" />
           <Property Name="idPresupuesto" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="partidoPolitico" Relationship="db_transparenciaModel.FK__candidato__idPar__6754599E" FromRole="candidato" ToRole="partidoPolitico" />
-          <NavigationProperty Name="presupuesto" Relationship="db_transparenciaModel.FK__candidato__idPre__6B24EA82" FromRole="candidato" ToRole="presupuesto" />
-          <NavigationProperty Name="tipoCandidato" Relationship="db_transparenciaModel.FK__candidato__idTip__6A30C649" FromRole="candidato" ToRole="tipoCandidato" />
-          <NavigationProperty Name="usuario" Relationship="db_transparenciaModel.FK__candidato__idUsu__6383C8BA" FromRole="candidato" ToRole="usuario" />
-          <NavigationProperty Name="pregunta" Relationship="db_transparenciaModel.FK__pregunta__idCand__68487DD7" FromRole="candidato" ToRole="pregunta" />
-          <NavigationProperty Name="propuestas" Relationship="db_transparenciaModel.FK__propuesta__idCan__693CA210" FromRole="candidato" ToRole="propuestas" />
+          <NavigationProperty Name="partidoPolitico" Relationship="Self.FK__candidato__idPar__412EB0B6" FromRole="candidato" ToRole="partidoPolitico" />
+          <NavigationProperty Name="presupuesto" Relationship="Self.FK__candidato__idPre__44FF419A" FromRole="candidato" ToRole="presupuesto" />
+          <NavigationProperty Name="tipoCandidato" Relationship="Self.FK__candidato__idTip__440B1D61" FromRole="candidato" ToRole="tipoCandidato" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK__candidato__idUsu__3D5E1FD2" FromRole="candidato" ToRole="usuario" />
+          <NavigationProperty Name="pregunta" Relationship="Self.FK__pregunta__idCand__4222D4EF" FromRole="candidato" ToRole="pregunta" />
+          <NavigationProperty Name="propuestas" Relationship="Self.FK__propuesta__idCan__4316F928" FromRole="candidato" ToRole="propuestas" />
         </EntityType>
         <EntityType Name="egreso">
           <Key>
@@ -510,43 +435,43 @@
           <Property Name="votosNegativos" Type="Int32" />
           <Property Name="latitud" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="longitud" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="archivo" Relationship="db_transparenciaModel.FK__egreso__idArchiv__6E01572D" FromRole="egreso" ToRole="archivo" />
-          <NavigationProperty Name="presupuesto" Relationship="db_transparenciaModel.FK__egreso__idPresup__6D0D32F4" FromRole="egreso" ToRole="presupuesto" />
+          <NavigationProperty Name="archivo" Relationship="Self.FK__egreso__idArchiv__47DBAE45" FromRole="egreso" ToRole="archivo" />
+          <NavigationProperty Name="presupuesto" Relationship="Self.FK__egreso__idPresup__46E78A0C" FromRole="egreso" ToRole="presupuesto" />
         </EntityType>
         <EntityType Name="estado">
           <Key>
             <PropertyRef Name="idEstado" />
           </Key>
           <Property Name="idEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="poblacion" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="persona" Relationship="db_transparenciaModel.FK__persona__idEstad__656C112C" FromRole="estado" ToRole="persona" />
-          <NavigationProperty Name="presupuesto" Relationship="db_transparenciaModel.FK__presupues__idEst__66603565" FromRole="estado" ToRole="presupuesto" />
+          <NavigationProperty Name="persona" Relationship="Self.FK__persona__idEstad__3F466844" FromRole="estado" ToRole="persona" />
+          <NavigationProperty Name="presupuesto" Relationship="Self.FK__presupues__idEst__403A8C7D" FromRole="estado" ToRole="presupuesto" />
         </EntityType>
         <EntityType Name="partidoPolitico">
           <Key>
             <PropertyRef Name="idPartido" />
           </Key>
           <Property Name="idPartido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="candidato" Relationship="db_transparenciaModel.FK__candidato__idPar__6754599E" FromRole="partidoPolitico" ToRole="candidato" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="candidato" Relationship="Self.FK__candidato__idPar__412EB0B6" FromRole="partidoPolitico" ToRole="candidato" />
         </EntityType>
         <EntityType Name="persona">
           <Key>
             <PropertyRef Name="idPersona" />
           </Key>
           <Property Name="idPersona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="apPaterno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="apMaterno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="direccion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apPaterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apMaterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="cp" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="genero" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="cp" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="genero" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idUsuario" Type="Int32" Nullable="false" />
           <Property Name="idEstado" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="estado" Relationship="db_transparenciaModel.FK__persona__idEstad__656C112C" FromRole="persona" ToRole="estado" />
-          <NavigationProperty Name="usuario" Relationship="db_transparenciaModel.FK__persona__idUsuar__628FA481" FromRole="persona" ToRole="usuario" />
+          <NavigationProperty Name="estado" Relationship="Self.FK__persona__idEstad__3F466844" FromRole="persona" ToRole="estado" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK__persona__idUsuar__3C69FB99" FromRole="persona" ToRole="usuario" />
         </EntityType>
         <EntityType Name="pregunta">
           <Key>
@@ -554,12 +479,12 @@
           </Key>
           <Property Name="idPregunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idCandidato" Type="Int32" Nullable="false" />
-          <Property Name="nombre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="pregunta1" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pregunta1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="votosPositivos" Type="Int32" />
           <Property Name="votosNegativos" Type="Int32" />
-          <Property Name="respuesta" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="candidato" Relationship="db_transparenciaModel.FK__pregunta__idCand__68487DD7" FromRole="pregunta" ToRole="candidato" />
+          <Property Name="respuesta" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="candidato" Relationship="Self.FK__pregunta__idCand__4222D4EF" FromRole="pregunta" ToRole="candidato" />
         </EntityType>
         <EntityType Name="presupuesto">
           <Key>
@@ -568,10 +493,10 @@
           <Property Name="idPresupuesto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="prepTotal" Type="Double" Nullable="false" />
           <Property Name="idEstado" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="candidato" Relationship="db_transparenciaModel.FK__candidato__idPre__6B24EA82" FromRole="presupuesto" ToRole="candidato" />
-          <NavigationProperty Name="egreso" Relationship="db_transparenciaModel.FK__egreso__idPresup__6D0D32F4" FromRole="presupuesto" ToRole="egreso" />
-          <NavigationProperty Name="estado" Relationship="db_transparenciaModel.FK__presupues__idEst__66603565" FromRole="presupuesto" ToRole="estado" />
-          <NavigationProperty Name="programasIngreso" Relationship="db_transparenciaModel.FK__programas__idPre__6C190EBB" FromRole="presupuesto" ToRole="programasIngreso" />
+          <NavigationProperty Name="candidato" Relationship="Self.FK__candidato__idPre__44FF419A" FromRole="presupuesto" ToRole="candidato" />
+          <NavigationProperty Name="egreso" Relationship="Self.FK__egreso__idPresup__46E78A0C" FromRole="presupuesto" ToRole="egreso" />
+          <NavigationProperty Name="estado" Relationship="Self.FK__presupues__idEst__403A8C7D" FromRole="presupuesto" ToRole="estado" />
+          <NavigationProperty Name="programasIngreso" Relationship="Self.FK__programas__idPre__45F365D3" FromRole="presupuesto" ToRole="programasIngreso" />
         </EntityType>
         <EntityType Name="programasIngreso">
           <Key>
@@ -580,7 +505,7 @@
           <Property Name="idProgramaIngreso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="presupuesto" Type="Double" Nullable="false" />
           <Property Name="idPresupuesto" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="presupuesto1" Relationship="db_transparenciaModel.FK__programas__idPre__6C190EBB" FromRole="programasIngreso" ToRole="presupuesto" />
+          <NavigationProperty Name="presupuesto1" Relationship="Self.FK__programas__idPre__45F365D3" FromRole="programasIngreso" ToRole="presupuesto" />
         </EntityType>
         <EntityType Name="propuestas">
           <Key>
@@ -591,51 +516,51 @@
           <Property Name="idTipoPropuesta" Type="Int32" Nullable="false" />
           <Property Name="idCandidato" Type="Int32" Nullable="false" />
           <Property Name="idArchivo" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="archivo" Relationship="db_transparenciaModel.FK__propuesta__idArc__6EF57B66" FromRole="propuestas" ToRole="archivo" />
-          <NavigationProperty Name="candidato" Relationship="db_transparenciaModel.FK__propuesta__idCan__693CA210" FromRole="propuestas" ToRole="candidato" />
-          <NavigationProperty Name="tipoPropuesta" Relationship="db_transparenciaModel.FK__propuesta__idTip__6FE99F9F" FromRole="propuestas" ToRole="tipoPropuesta" />
+          <NavigationProperty Name="archivo" Relationship="Self.FK__propuesta__idArc__48CFD27E" FromRole="propuestas" ToRole="archivo" />
+          <NavigationProperty Name="candidato" Relationship="Self.FK__propuesta__idCan__4316F928" FromRole="propuestas" ToRole="candidato" />
+          <NavigationProperty Name="tipoPropuesta" Relationship="Self.FK__propuesta__idTip__49C3F6B7" FromRole="propuestas" ToRole="tipoPropuesta" />
         </EntityType>
         <EntityType Name="tipoCandidato">
           <Key>
             <PropertyRef Name="idTipoCandidato" />
           </Key>
           <Property Name="idTipoCandidato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tipoCandidato1" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="candidato" Relationship="db_transparenciaModel.FK__candidato__idTip__6A30C649" FromRole="tipoCandidato" ToRole="candidato" />
+          <Property Name="tipoCandidato1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="candidato" Relationship="Self.FK__candidato__idTip__440B1D61" FromRole="tipoCandidato" ToRole="candidato" />
         </EntityType>
         <EntityType Name="tipoPropuesta">
           <Key>
             <PropertyRef Name="idTipoPropuesta" />
           </Key>
           <Property Name="idTipoPropuesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tipoPropuesta1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="propuestas" Relationship="db_transparenciaModel.FK__propuesta__idTip__6FE99F9F" FromRole="tipoPropuesta" ToRole="propuestas" />
+          <Property Name="tipoPropuesta1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="propuestas" Relationship="Self.FK__propuesta__idTip__49C3F6B7" FromRole="tipoPropuesta" ToRole="propuestas" />
         </EntityType>
         <EntityType Name="tipoUsuario">
           <Key>
             <PropertyRef Name="idTipoUsuario" />
           </Key>
           <Property Name="idTipoUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tipo" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="tipo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="usuario" Relationship="db_transparenciaModel.FK__usuario__idTipoU__6477ECF3" FromRole="tipoUsuario" ToRole="usuario" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK__usuario__idTipoU__3E52440B" FromRole="tipoUsuario" ToRole="usuario" />
         </EntityType>
         <EntityType Name="usuario">
           <Key>
             <PropertyRef Name="idUsuario" />
           </Key>
-          <Property Name="usuario1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idTipoUsuario" Type="Int32" Nullable="false" />
-          <Property Name="contrasena" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="contrasena" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="email" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="candidato" Relationship="db_transparenciaModel.FK__candidato__idUsu__6383C8BA" FromRole="usuario" ToRole="candidato" />
-          <NavigationProperty Name="persona" Relationship="db_transparenciaModel.FK__persona__idUsuar__628FA481" FromRole="usuario" ToRole="persona" />
-          <NavigationProperty Name="tipoUsuario" Relationship="db_transparenciaModel.FK__usuario__idTipoU__6477ECF3" FromRole="usuario" ToRole="tipoUsuario" />
+          <Property Name="email" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="candidato" Relationship="Self.FK__candidato__idUsu__3D5E1FD2" FromRole="usuario" ToRole="candidato" />
+          <NavigationProperty Name="persona" Relationship="Self.FK__persona__idUsuar__3C69FB99" FromRole="usuario" ToRole="persona" />
+          <NavigationProperty Name="tipoUsuario" Relationship="Self.FK__usuario__idTipoU__3E52440B" FromRole="usuario" ToRole="tipoUsuario" />
         </EntityType>
-        <Association Name="FK__egreso__idArchiv__6E01572D">
-          <End Type="db_transparenciaModel.archivo" Role="archivo" Multiplicity="1" />
-          <End Type="db_transparenciaModel.egreso" Role="egreso" Multiplicity="*" />
+        <Association Name="FK__egreso__idArchiv__47DBAE45">
+          <End Role="archivo" Type="Self.archivo" Multiplicity="1" />
+          <End Role="egreso" Type="Self.egreso" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="archivo">
               <PropertyRef Name="idArchivo" />
@@ -645,9 +570,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__propuesta__idArc__6EF57B66">
-          <End Type="db_transparenciaModel.archivo" Role="archivo" Multiplicity="1" />
-          <End Type="db_transparenciaModel.propuestas" Role="propuestas" Multiplicity="*" />
+        <Association Name="FK__propuesta__idArc__48CFD27E">
+          <End Role="archivo" Type="Self.archivo" Multiplicity="1" />
+          <End Role="propuestas" Type="Self.propuestas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="archivo">
               <PropertyRef Name="idArchivo" />
@@ -657,9 +582,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__candidato__idPar__6754599E">
-          <End Type="db_transparenciaModel.partidoPolitico" Role="partidoPolitico" Multiplicity="1" />
-          <End Type="db_transparenciaModel.candidato" Role="candidato" Multiplicity="*" />
+        <Association Name="FK__candidato__idPar__412EB0B6">
+          <End Role="partidoPolitico" Type="Self.partidoPolitico" Multiplicity="1" />
+          <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="partidoPolitico">
               <PropertyRef Name="idPartido" />
@@ -669,9 +594,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__candidato__idPre__6B24EA82">
-          <End Type="db_transparenciaModel.presupuesto" Role="presupuesto" Multiplicity="1" />
-          <End Type="db_transparenciaModel.candidato" Role="candidato" Multiplicity="*" />
+        <Association Name="FK__candidato__idPre__44FF419A">
+          <End Role="presupuesto" Type="Self.presupuesto" Multiplicity="1" />
+          <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="presupuesto">
               <PropertyRef Name="idPresupuesto" />
@@ -681,9 +606,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__candidato__idTip__6A30C649">
-          <End Type="db_transparenciaModel.tipoCandidato" Role="tipoCandidato" Multiplicity="1" />
-          <End Type="db_transparenciaModel.candidato" Role="candidato" Multiplicity="*" />
+        <Association Name="FK__candidato__idTip__440B1D61">
+          <End Role="tipoCandidato" Type="Self.tipoCandidato" Multiplicity="1" />
+          <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tipoCandidato">
               <PropertyRef Name="idTipoCandidato" />
@@ -693,9 +618,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__candidato__idUsu__6383C8BA">
-          <End Type="db_transparenciaModel.usuario" Role="usuario" Multiplicity="1" />
-          <End Type="db_transparenciaModel.candidato" Role="candidato" Multiplicity="*" />
+        <Association Name="FK__candidato__idUsu__3D5E1FD2">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="candidato" Type="Self.candidato" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="usuario">
               <PropertyRef Name="idUsuario" />
@@ -705,9 +630,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__pregunta__idCand__68487DD7">
-          <End Type="db_transparenciaModel.candidato" Role="candidato" Multiplicity="1" />
-          <End Type="db_transparenciaModel.pregunta" Role="pregunta" Multiplicity="*" />
+        <Association Name="FK__pregunta__idCand__4222D4EF">
+          <End Role="candidato" Type="Self.candidato" Multiplicity="1" />
+          <End Role="pregunta" Type="Self.pregunta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="candidato">
               <PropertyRef Name="idCandidato" />
@@ -717,9 +642,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__propuesta__idCan__693CA210">
-          <End Type="db_transparenciaModel.candidato" Role="candidato" Multiplicity="1" />
-          <End Type="db_transparenciaModel.propuestas" Role="propuestas" Multiplicity="*" />
+        <Association Name="FK__propuesta__idCan__4316F928">
+          <End Role="candidato" Type="Self.candidato" Multiplicity="1" />
+          <End Role="propuestas" Type="Self.propuestas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="candidato">
               <PropertyRef Name="idCandidato" />
@@ -729,9 +654,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__egreso__idPresup__6D0D32F4">
-          <End Type="db_transparenciaModel.presupuesto" Role="presupuesto" Multiplicity="1" />
-          <End Type="db_transparenciaModel.egreso" Role="egreso" Multiplicity="*" />
+        <Association Name="FK__egreso__idPresup__46E78A0C">
+          <End Role="presupuesto" Type="Self.presupuesto" Multiplicity="1" />
+          <End Role="egreso" Type="Self.egreso" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="presupuesto">
               <PropertyRef Name="idPresupuesto" />
@@ -741,9 +666,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__persona__idEstad__656C112C">
-          <End Type="db_transparenciaModel.estado" Role="estado" Multiplicity="1" />
-          <End Type="db_transparenciaModel.persona" Role="persona" Multiplicity="*" />
+        <Association Name="FK__persona__idEstad__3F466844">
+          <End Role="estado" Type="Self.estado" Multiplicity="1" />
+          <End Role="persona" Type="Self.persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="estado">
               <PropertyRef Name="idEstado" />
@@ -753,9 +678,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__presupues__idEst__66603565">
-          <End Type="db_transparenciaModel.estado" Role="estado" Multiplicity="1" />
-          <End Type="db_transparenciaModel.presupuesto" Role="presupuesto" Multiplicity="*" />
+        <Association Name="FK__presupues__idEst__403A8C7D">
+          <End Role="estado" Type="Self.estado" Multiplicity="1" />
+          <End Role="presupuesto" Type="Self.presupuesto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="estado">
               <PropertyRef Name="idEstado" />
@@ -765,9 +690,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__persona__idUsuar__628FA481">
-          <End Type="db_transparenciaModel.usuario" Role="usuario" Multiplicity="1" />
-          <End Type="db_transparenciaModel.persona" Role="persona" Multiplicity="*" />
+        <Association Name="FK__persona__idUsuar__3C69FB99">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
+          <End Role="persona" Type="Self.persona" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="usuario">
               <PropertyRef Name="idUsuario" />
@@ -777,9 +702,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__programas__idPre__6C190EBB">
-          <End Type="db_transparenciaModel.presupuesto" Role="presupuesto" Multiplicity="1" />
-          <End Type="db_transparenciaModel.programasIngreso" Role="programasIngreso" Multiplicity="*" />
+        <Association Name="FK__programas__idPre__45F365D3">
+          <End Role="presupuesto" Type="Self.presupuesto" Multiplicity="1" />
+          <End Role="programasIngreso" Type="Self.programasIngreso" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="presupuesto">
               <PropertyRef Name="idPresupuesto" />
@@ -789,9 +714,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__propuesta__idTip__6FE99F9F">
-          <End Type="db_transparenciaModel.tipoPropuesta" Role="tipoPropuesta" Multiplicity="1" />
-          <End Type="db_transparenciaModel.propuestas" Role="propuestas" Multiplicity="*" />
+        <Association Name="FK__propuesta__idTip__49C3F6B7">
+          <End Role="tipoPropuesta" Type="Self.tipoPropuesta" Multiplicity="1" />
+          <End Role="propuestas" Type="Self.propuestas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tipoPropuesta">
               <PropertyRef Name="idTipoPropuesta" />
@@ -801,9 +726,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__usuario__idTipoU__6477ECF3">
-          <End Type="db_transparenciaModel.tipoUsuario" Role="tipoUsuario" Multiplicity="1" />
-          <End Type="db_transparenciaModel.usuario" Role="usuario" Multiplicity="*" />
+        <Association Name="FK__usuario__idTipoU__3E52440B">
+          <End Role="tipoUsuario" Type="Self.tipoUsuario" Multiplicity="1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tipoUsuario">
               <PropertyRef Name="idTipoUsuario" />
@@ -813,6 +738,82 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityContainer Name="db_transparenciaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="archivo" EntityType="Self.archivo" />
+          <EntitySet Name="candidato" EntityType="Self.candidato" />
+          <EntitySet Name="egreso" EntityType="Self.egreso" />
+          <EntitySet Name="estado" EntityType="Self.estado" />
+          <EntitySet Name="partidoPolitico" EntityType="Self.partidoPolitico" />
+          <EntitySet Name="persona" EntityType="Self.persona" />
+          <EntitySet Name="pregunta" EntityType="Self.pregunta" />
+          <EntitySet Name="presupuesto" EntityType="Self.presupuesto" />
+          <EntitySet Name="programasIngreso" EntityType="Self.programasIngreso" />
+          <EntitySet Name="propuestas" EntityType="Self.propuestas" />
+          <EntitySet Name="tipoCandidato" EntityType="Self.tipoCandidato" />
+          <EntitySet Name="tipoPropuesta" EntityType="Self.tipoPropuesta" />
+          <EntitySet Name="tipoUsuario" EntityType="Self.tipoUsuario" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" />
+          <AssociationSet Name="FK__egreso__idArchiv__47DBAE45" Association="Self.FK__egreso__idArchiv__47DBAE45">
+            <End Role="archivo" EntitySet="archivo" />
+            <End Role="egreso" EntitySet="egreso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__propuesta__idArc__48CFD27E" Association="Self.FK__propuesta__idArc__48CFD27E">
+            <End Role="archivo" EntitySet="archivo" />
+            <End Role="propuestas" EntitySet="propuestas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__candidato__idPar__412EB0B6" Association="Self.FK__candidato__idPar__412EB0B6">
+            <End Role="partidoPolitico" EntitySet="partidoPolitico" />
+            <End Role="candidato" EntitySet="candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK__candidato__idPre__44FF419A" Association="Self.FK__candidato__idPre__44FF419A">
+            <End Role="presupuesto" EntitySet="presupuesto" />
+            <End Role="candidato" EntitySet="candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK__candidato__idTip__440B1D61" Association="Self.FK__candidato__idTip__440B1D61">
+            <End Role="tipoCandidato" EntitySet="tipoCandidato" />
+            <End Role="candidato" EntitySet="candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK__candidato__idUsu__3D5E1FD2" Association="Self.FK__candidato__idUsu__3D5E1FD2">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="candidato" EntitySet="candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK__pregunta__idCand__4222D4EF" Association="Self.FK__pregunta__idCand__4222D4EF">
+            <End Role="candidato" EntitySet="candidato" />
+            <End Role="pregunta" EntitySet="pregunta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__propuesta__idCan__4316F928" Association="Self.FK__propuesta__idCan__4316F928">
+            <End Role="candidato" EntitySet="candidato" />
+            <End Role="propuestas" EntitySet="propuestas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__egreso__idPresup__46E78A0C" Association="Self.FK__egreso__idPresup__46E78A0C">
+            <End Role="presupuesto" EntitySet="presupuesto" />
+            <End Role="egreso" EntitySet="egreso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__persona__idEstad__3F466844" Association="Self.FK__persona__idEstad__3F466844">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="persona" EntitySet="persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__presupues__idEst__403A8C7D" Association="Self.FK__presupues__idEst__403A8C7D">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="presupuesto" EntitySet="presupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__persona__idUsuar__3C69FB99" Association="Self.FK__persona__idUsuar__3C69FB99">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="persona" EntitySet="persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__programas__idPre__45F365D3" Association="Self.FK__programas__idPre__45F365D3">
+            <End Role="presupuesto" EntitySet="presupuesto" />
+            <End Role="programasIngreso" EntitySet="programasIngreso" />
+          </AssociationSet>
+          <AssociationSet Name="FK__propuesta__idTip__49C3F6B7" Association="Self.FK__propuesta__idTip__49C3F6B7">
+            <End Role="tipoPropuesta" EntitySet="tipoPropuesta" />
+            <End Role="propuestas" EntitySet="propuestas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usuario__idTipoU__3E52440B" Association="Self.FK__usuario__idTipoU__3E52440B">
+            <End Role="tipoUsuario" EntitySet="tipoUsuario" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -822,145 +823,145 @@
           <EntitySetMapping Name="archivo">
             <EntityTypeMapping TypeName="db_transparenciaModel.archivo">
               <MappingFragment StoreEntitySet="archivo">
-                <ScalarProperty Name="ruta" ColumnName="ruta" />
                 <ScalarProperty Name="idArchivo" ColumnName="idArchivo" />
+                <ScalarProperty Name="ruta" ColumnName="ruta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="candidato">
             <EntityTypeMapping TypeName="db_transparenciaModel.candidato">
               <MappingFragment StoreEntitySet="candidato">
-                <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
-                <ScalarProperty Name="idTipoCandidato" ColumnName="idTipoCandidato" />
-                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-                <ScalarProperty Name="idPartido" ColumnName="idPartido" />
                 <ScalarProperty Name="idCandidato" ColumnName="idCandidato" />
+                <ScalarProperty Name="idPartido" ColumnName="idPartido" />
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="idTipoCandidato" ColumnName="idTipoCandidato" />
+                <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="egreso">
             <EntityTypeMapping TypeName="db_transparenciaModel.egreso">
               <MappingFragment StoreEntitySet="egreso">
-                <ScalarProperty Name="longitud" ColumnName="longitud" />
-                <ScalarProperty Name="latitud" ColumnName="latitud" />
-                <ScalarProperty Name="votosNegativos" ColumnName="votosNegativos" />
-                <ScalarProperty Name="votosPositivos" ColumnName="votosPositivos" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-                <ScalarProperty Name="idArchivo" ColumnName="idArchivo" />
-                <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
                 <ScalarProperty Name="idEgreso" ColumnName="idEgreso" />
+                <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+                <ScalarProperty Name="idArchivo" ColumnName="idArchivo" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="votosPositivos" ColumnName="votosPositivos" />
+                <ScalarProperty Name="votosNegativos" ColumnName="votosNegativos" />
+                <ScalarProperty Name="latitud" ColumnName="latitud" />
+                <ScalarProperty Name="longitud" ColumnName="longitud" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="estado">
             <EntityTypeMapping TypeName="db_transparenciaModel.estado">
               <MappingFragment StoreEntitySet="estado">
-                <ScalarProperty Name="poblacion" ColumnName="poblacion" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="poblacion" ColumnName="poblacion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="partidoPolitico">
             <EntityTypeMapping TypeName="db_transparenciaModel.partidoPolitico">
               <MappingFragment StoreEntitySet="partidoPolitico">
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="idPartido" ColumnName="idPartido" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="persona">
             <EntityTypeMapping TypeName="db_transparenciaModel.persona">
               <MappingFragment StoreEntitySet="persona">
-                <ScalarProperty Name="idEstado" ColumnName="idEstado" />
-                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-                <ScalarProperty Name="genero" ColumnName="genero" />
-                <ScalarProperty Name="cp" ColumnName="cp" />
-                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
-                <ScalarProperty Name="direccion" ColumnName="direccion" />
-                <ScalarProperty Name="apMaterno" ColumnName="apMaterno" />
-                <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
+                <ScalarProperty Name="apMaterno" ColumnName="apMaterno" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+                <ScalarProperty Name="cp" ColumnName="cp" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="idEstado" ColumnName="idEstado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="pregunta">
             <EntityTypeMapping TypeName="db_transparenciaModel.pregunta">
               <MappingFragment StoreEntitySet="pregunta">
-                <ScalarProperty Name="respuesta" ColumnName="respuesta" />
-                <ScalarProperty Name="votosNegativos" ColumnName="votosNegativos" />
-                <ScalarProperty Name="votosPositivos" ColumnName="votosPositivos" />
-                <ScalarProperty Name="pregunta1" ColumnName="pregunta" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="idCandidato" ColumnName="idCandidato" />
                 <ScalarProperty Name="idPregunta" ColumnName="idPregunta" />
+                <ScalarProperty Name="idCandidato" ColumnName="idCandidato" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="pregunta1" ColumnName="pregunta" />
+                <ScalarProperty Name="votosPositivos" ColumnName="votosPositivos" />
+                <ScalarProperty Name="votosNegativos" ColumnName="votosNegativos" />
+                <ScalarProperty Name="respuesta" ColumnName="respuesta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="presupuesto">
             <EntityTypeMapping TypeName="db_transparenciaModel.presupuesto">
               <MappingFragment StoreEntitySet="presupuesto">
-                <ScalarProperty Name="idEstado" ColumnName="idEstado" />
-                <ScalarProperty Name="prepTotal" ColumnName="prepTotal" />
                 <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
+                <ScalarProperty Name="prepTotal" ColumnName="prepTotal" />
+                <ScalarProperty Name="idEstado" ColumnName="idEstado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="programasIngreso">
             <EntityTypeMapping TypeName="db_transparenciaModel.programasIngreso">
               <MappingFragment StoreEntitySet="programasIngreso">
-                <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
-                <ScalarProperty Name="presupuesto" ColumnName="presupuesto" />
                 <ScalarProperty Name="idProgramaIngreso" ColumnName="idProgramaIngreso" />
+                <ScalarProperty Name="presupuesto" ColumnName="presupuesto" />
+                <ScalarProperty Name="idPresupuesto" ColumnName="idPresupuesto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="propuestas">
             <EntityTypeMapping TypeName="db_transparenciaModel.propuestas">
               <MappingFragment StoreEntitySet="propuestas">
-                <ScalarProperty Name="idArchivo" ColumnName="idArchivo" />
-                <ScalarProperty Name="idCandidato" ColumnName="idCandidato" />
-                <ScalarProperty Name="idTipoPropuesta" ColumnName="idTipoPropuesta" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="idPropuesta" ColumnName="idPropuesta" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="idTipoPropuesta" ColumnName="idTipoPropuesta" />
+                <ScalarProperty Name="idCandidato" ColumnName="idCandidato" />
+                <ScalarProperty Name="idArchivo" ColumnName="idArchivo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tipoCandidato">
             <EntityTypeMapping TypeName="db_transparenciaModel.tipoCandidato">
               <MappingFragment StoreEntitySet="tipoCandidato">
-                <ScalarProperty Name="tipoCandidato1" ColumnName="tipoCandidato" />
                 <ScalarProperty Name="idTipoCandidato" ColumnName="idTipoCandidato" />
+                <ScalarProperty Name="tipoCandidato1" ColumnName="tipoCandidato" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tipoPropuesta">
             <EntityTypeMapping TypeName="db_transparenciaModel.tipoPropuesta">
               <MappingFragment StoreEntitySet="tipoPropuesta">
-                <ScalarProperty Name="tipoPropuesta1" ColumnName="tipoPropuesta" />
                 <ScalarProperty Name="idTipoPropuesta" ColumnName="idTipoPropuesta" />
+                <ScalarProperty Name="tipoPropuesta1" ColumnName="tipoPropuesta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tipoUsuario">
             <EntityTypeMapping TypeName="db_transparenciaModel.tipoUsuario">
               <MappingFragment StoreEntitySet="tipoUsuario">
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="tipo" ColumnName="tipo" />
                 <ScalarProperty Name="idTipoUsuario" ColumnName="idTipoUsuario" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="usuario">
             <EntityTypeMapping TypeName="db_transparenciaModel.usuario">
               <MappingFragment StoreEntitySet="usuario">
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-                <ScalarProperty Name="contrasena" ColumnName="contrasena" />
-                <ScalarProperty Name="idTipoUsuario" ColumnName="idTipoUsuario" />
                 <ScalarProperty Name="usuario1" ColumnName="usuario" />
+                <ScalarProperty Name="idTipoUsuario" ColumnName="idTipoUsuario" />
+                <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="email" ColumnName="email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

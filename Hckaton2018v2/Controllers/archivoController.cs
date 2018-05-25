@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
-using System.Web.Hosting;
 using System.Web.Mvc;
 using Hckaton2018v2;
-using Hckaton2018v2.Models;
 
 namespace Hckaton2018v2.Controllers
 {
@@ -17,52 +14,10 @@ namespace Hckaton2018v2.Controllers
     {
         private db_transparenciaEntities db = new db_transparenciaEntities();
 
-        DataClasses objData;
-
-        public archivoController()
-        {
-            objData = new DataClasses();
-        }
-          
-        
-        [HttpPost]
-        public ActionResult Cargar(HttpPostedFileBase archivo)
-        {
-            if (archivo != null && archivo.ContentLength > 0)
-            {
-                var nombreArchivo = Path.GetFileName(archivo.FileName);
-                var path = Path.Combine(Server.MapPath("~/App_Data/Documentos Subidos"), nombreArchivo);
-                archivo.SaveAs(path);
-            }
-
-            var files = objData.GetFiles();
-            return View("index", files);
-
-        }
-
-
-        public FileResult Download(string id)
-        {
-            int fid = Convert.ToInt32(id);
-            var files = objData.GetFiles();
-            string filename = (from f in files
-                               where f.FileId == fid
-                               select f.FilePath).First();
-
-            string contentType = "application/pdf";
-
-            //Parameters to file are
-            //1. The File Path on the File Server
-            //2. The content type MIME type
-            //3. The parameter for the file save by the browser
-            return File(filename, contentType, "TransparenteDownload.pdf");
-        }
-
         // GET: archivo
         public ActionResult Index()
         {
-            var files = objData.GetFiles();
-            return View("index", files);
+            return View(db.archivo.ToList());
         }
 
         // GET: archivo/Details/5

@@ -1,46 +1,42 @@
 ﻿@model Hckaton2018v2.Controllers.programasIngreso
 
+@{
+    Layout = null;
+}
 
-<section class="wellcome_area clearfix" id="home">
-    <div class="container h-100">
-        <div class="row h-50 align-items-center">
-            <div class="col-12 col-md">
+<!DOCTYPE html>
 
-                <div class="page-header text-center">
-                    <h1 style="color:#f3f3ff">Ingresos</h1>
-                </div>
-
-
-                <br>
-
-                <div>
-                    <h4>programasIngreso</h4>
-                    <hr />
-                    <dl class="dl-horizontal">
-                        <dt>
-                            @Html.DisplayNameFor(model => model.presupuesto)
-                        </dt>
-
-                        <dd>
-                            @Html.DisplayFor(model => model.presupuesto)
-                        </dd>
-
-                        <dt>
-                            @Html.DisplayNameFor(model => model.presupuesto1.idPresupuesto)
-                        </dt>
-
-                        <dd>
-                            @Html.DisplayFor(model => model.presupuesto1.idPresupuesto)
-                        </dd>
-
-                    </dl>
-                </div>
-                <p>
-                    @Html.ActionLink("Edit", "Edit", new { id = Model.idProgramaIngreso }) |
-                    @Html.ActionLink("Back to List", "Index")
-                </p>
-
-            </div>
-        </div>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>programasIngreso</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.presupuesto)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.presupuesto)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.presupuesto1.idPresupuesto)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.presupuesto1.idPresupuesto)
+            </dd>
+    
+        </dl>
     </div>
-</section>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idProgramaIngreso }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

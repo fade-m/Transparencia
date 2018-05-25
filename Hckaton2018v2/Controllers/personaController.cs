@@ -9,18 +9,18 @@ using System.Web.Mvc;
 
 namespace Hckaton2018v2.Controllers
 {
-    public class personasController : Controller
+    public class personaController : Controller
     {
         private db_transparenciaEntities db = new db_transparenciaEntities();
 
-        // GET: personas
+        // GET: persona
         public ActionResult Index()
         {
             var persona = db.persona.Include(p => p.estado).Include(p => p.usuario);
             return View(persona.ToList());
         }
 
-        // GET: personas/Details/5
+        // GET: persona/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,7 +35,7 @@ namespace Hckaton2018v2.Controllers
             return View(persona);
         }
 
-        // GET: personas/Create
+        // GET: persona/Create
         public ActionResult Create()
         {
             ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre");
@@ -43,9 +43,9 @@ namespace Hckaton2018v2.Controllers
             return View();
         }
 
-        // POST: personas/Create
+        // POST: persona/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "idPersona,nombre,apPaterno,apMaterno,direccion,fechaNacimiento,cp,genero,idUsuario,idEstado")] persona persona)
@@ -62,7 +62,7 @@ namespace Hckaton2018v2.Controllers
             return View(persona);
         }
 
-        // GET: personas/Edit/5
+        // GET: persona/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,9 +79,9 @@ namespace Hckaton2018v2.Controllers
             return View(persona);
         }
 
-        // POST: personas/Edit/5
+        // POST: persona/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "idPersona,nombre,apPaterno,apMaterno,direccion,fechaNacimiento,cp,genero,idUsuario,idEstado")] persona persona)
@@ -97,7 +97,7 @@ namespace Hckaton2018v2.Controllers
             return View(persona);
         }
 
-        // GET: personas/Delete/5
+        // GET: persona/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,7 +112,7 @@ namespace Hckaton2018v2.Controllers
             return View(persona);
         }
 
-        // POST: personas/Delete/5
+        // POST: persona/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
