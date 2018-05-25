@@ -1,5 +1,9 @@
 <<<<<<< HEAD:Hckaton2018v2/Controllers/Model1.Designer.cs
+<<<<<<< HEAD:Hckaton2018v2/Controllers/Model1.Designer.cs
 ﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Jair\Documents\GitHub\Transparencia\Hckaton2018v2\Controllers\Model1.edmx'. 
+=======
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Jair\Documents\GitHub\Transparencia\Hckaton2018v2\Model1.edmx'. 
+>>>>>>> parent of 5ff471a... Ignores:Hckaton2018v2/Model1.Designer.cs
 =======
 ﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Jair\Documents\GitHub\Transparencia\Hckaton2018v2\Model1.edmx'. 
 >>>>>>> parent of 5ff471a... Ignores:Hckaton2018v2/Model1.Designer.cs

@@ -8,6 +8,9 @@
       <Diagram DiagramId="36bc0410a0894aac8a640a5a6b687b4e" Name="Diagram1">
 =======
       <Diagram DiagramId="b736f07c39504e0d90a6ac9ce7f1b537" Name="Diagram1">
+<<<<<<< HEAD:Hckaton2018v2/Controllers/Model1.edmx.diagram
+>>>>>>> parent of 5ff471a... Ignores:Hckaton2018v2/Model1.edmx.diagram
+=======
 >>>>>>> parent of 5ff471a... Ignores:Hckaton2018v2/Model1.edmx.diagram
         <EntityTypeShape EntityType="db_transparenciaModel.archivo" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="db_transparenciaModel.candidato" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
