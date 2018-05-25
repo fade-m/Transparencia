@@ -4,6 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="b736f07c39504e0d90a6ac9ce7f1b537" Name="Diagram1">
         <EntityTypeShape EntityType="db_transparenciaModel.archivo" Width="1.5" PointX="8.25" PointY="8.875" />
         <EntityTypeShape EntityType="db_transparenciaModel.candidato" Width="1.5" PointX="5.25" PointY="12.375" />
@@ -34,6 +35,38 @@
         <AssociationConnector Association="db_transparenciaModel.FK__programas__idPre__6C190EBB" />
         <AssociationConnector Association="db_transparenciaModel.FK__propuesta__idTip__6FE99F9F" />
         <AssociationConnector Association="db_transparenciaModel.FK__usuario__idTipoU__6477ECF3" />
+=======
+      <Diagram DiagramId="2c9be67daba44f89a4ad5df3643c0769" Name="Diagram1">
+        <EntityTypeShape EntityType="db_transparenciaModel.archivo" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.candidato" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.egreso" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.estado" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.partidoPolitico" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.persona" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.pregunta" Width="1.5" PointX="7.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.presupuesto" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.programasIngreso" Width="1.5" PointX="5.5" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.propuestas" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.tipoCandidato" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.tipoPropuesta" Width="1.5" PointX="8.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.tipoUsuario" Width="1.5" PointX="1.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.usuario" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="db_transparenciaModel.FK__egreso__idArchiv__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__propuesta__idArc__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__candidato__idPar__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__candidato__idPre__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__candidato__idTip__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__candidato__idUsu__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__pregunta__idCand__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__propuesta__idCan__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__egreso__idPresup__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__persona__idEstad__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__presupues__idEst__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__persona__idUsuar__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__programas__idPre__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__propuesta__idTip__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="db_transparenciaModel.FK__usuario__idTipoU__3E52440B" ManuallyRouted="false" />
+>>>>>>> b340fde361ef5893d6400f7ca93cd11fe437a37d
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

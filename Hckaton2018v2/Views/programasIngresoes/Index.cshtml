@@ -1,47 +1,52 @@
 ﻿@model IEnumerable<Hckaton2018v2.programasIngreso>
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.presupuesto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.presupuesto1.idPresupuesto)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.presupuesto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.presupuesto1.idPresupuesto)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.idProgramaIngreso }) |
-                @Html.ActionLink("Details", "Details", new { id=item.idProgramaIngreso }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.idProgramaIngreso })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+                <div class="page-header text-center">
+                    <h1 style="color:#f3f3ff">Ingresos</h1>
+                </div>
+
+
+                <br>
+
+                <p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.presupuesto)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.presupuesto1.idPresupuesto)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.presupuesto)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.presupuesto1.idPresupuesto)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.idProgramaIngreso }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.idProgramaIngreso }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.idProgramaIngreso })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>
