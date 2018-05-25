@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Hckaton2018v2;
 
 namespace Hckaton2018v2.Controllers
 {
@@ -16,7 +17,7 @@ namespace Hckaton2018v2.Controllers
         // GET: persona
         public ActionResult Index()
         {
-            var persona = db.persona.Include(p => p.estado).Include(p => p.usuario);
+            var persona = db.persona.Include(p => p.estado);
             return View(persona.ToList());
         }
 
@@ -39,16 +40,15 @@ namespace Hckaton2018v2.Controllers
         public ActionResult Create()
         {
             ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre");
-            ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1");
             return View();
         }
 
         // POST: persona/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idPersona,nombre,apPaterno,apMaterno,direccion,fechaNacimiento,cp,genero,idUsuario,idEstado")] persona persona)
+        public ActionResult Create([Bind(Include = "idPersona,nombre,apPaterno,apMaterno,direccion,fechaNacimiento,cp,genero,idEstado")] persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,6 @@ namespace Hckaton2018v2.Controllers
             }
 
             ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre", persona.idEstado);
-            ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1", persona.idUsuario);
             return View(persona);
         }
 
@@ -75,16 +74,15 @@ namespace Hckaton2018v2.Controllers
                 return HttpNotFound();
             }
             ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre", persona.idEstado);
-            ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1", persona.idUsuario);
             return View(persona);
         }
 
         // POST: persona/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idPersona,nombre,apPaterno,apMaterno,direccion,fechaNacimiento,cp,genero,idUsuario,idEstado")] persona persona)
+        public ActionResult Edit([Bind(Include = "idPersona,nombre,apPaterno,apMaterno,direccion,fechaNacimiento,cp,genero,idEstado")] persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +91,6 @@ namespace Hckaton2018v2.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre", persona.idEstado);
-            ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1", persona.idUsuario);
             return View(persona);
         }
 

@@ -1,4 +1,4 @@
-﻿@model Hckaton2018v2.Controllers.usuario
+﻿@model Hckaton2018v2.usuario
 
 @{
     Layout = null;
@@ -53,6 +53,14 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.idPersona, "idPersona", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("idPersona", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.idPersona, "", new { @class = "text-danger" })
                 </div>
             </div>
     

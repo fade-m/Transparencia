@@ -1,4 +1,4 @@
-﻿@model Hckaton2018v2.Controllers.usuario
+﻿@model Hckaton2018v2.usuario
 
 @{
     Layout = null;
@@ -38,6 +38,14 @@
     
             <dd>
                 @Html.DisplayFor(model => model.email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.persona.nombre)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.persona.nombre)
             </dd>
     
             <dt>

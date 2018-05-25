@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2.Controllers
+namespace Hckaton2018v2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class pregunta
+    public partial class propuestas
     {
-        public int idPregunta { get; set; }
+        public int idPropuesta { get; set; }
+        public string descripcion { get; set; }
+        public int idTipoPropuesta { get; set; }
         public int idCandidato { get; set; }
-        public string nombre { get; set; }
-        public string pregunta1 { get; set; }
-        public Nullable<int> votosPositivos { get; set; }
-        public Nullable<int> votosNegativos { get; set; }
-        public string respuesta { get; set; }
+        public int idArchivo { get; set; }
     
+        public virtual archivo archivo { get; set; }
         public virtual candidato candidato { get; set; }
+        public virtual tipoPropuesta tipoPropuesta { get; set; }
     }
 }

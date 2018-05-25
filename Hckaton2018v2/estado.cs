@@ -7,26 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2.Controllers
+namespace Hckaton2018v2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class archivo
+    public partial class estado
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public archivo()
+        public estado()
         {
-            this.egreso = new HashSet<egreso>();
-            this.propuestas = new HashSet<propuestas>();
+            this.persona = new HashSet<persona>();
+            this.presupuesto = new HashSet<presupuesto>();
         }
     
-        public int idArchivo { get; set; }
-        public string ruta { get; set; }
+        public int idEstado { get; set; }
+        public string nombre { get; set; }
+        public int poblacion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<egreso> egreso { get; set; }
+        public virtual ICollection<persona> persona { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<propuestas> propuestas { get; set; }
+        public virtual ICollection<presupuesto> presupuesto { get; set; }
     }
 }

@@ -7,31 +7,33 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2.Controllers
+namespace Hckaton2018v2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class presupuesto
+    public partial class candidato
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public presupuesto()
+        public candidato()
         {
-            this.candidato = new HashSet<candidato>();
-            this.egreso = new HashSet<egreso>();
-            this.programasIngreso = new HashSet<programasIngreso>();
+            this.pregunta = new HashSet<pregunta>();
+            this.propuestas = new HashSet<propuestas>();
         }
     
+        public int idCandidato { get; set; }
+        public int idPartido { get; set; }
+        public int idUsuario { get; set; }
+        public int idTipoCandidato { get; set; }
         public int idPresupuesto { get; set; }
-        public double prepTotal { get; set; }
-        public int idEstado { get; set; }
     
+        public virtual partidoPolitico partidoPolitico { get; set; }
+        public virtual presupuesto presupuesto { get; set; }
+        public virtual tipoCandidato tipoCandidato { get; set; }
+        public virtual usuario usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<candidato> candidato { get; set; }
+        public virtual ICollection<pregunta> pregunta { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<egreso> egreso { get; set; }
-        public virtual estado estado { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<programasIngreso> programasIngreso { get; set; }
+        public virtual ICollection<propuestas> propuestas { get; set; }
     }
 }

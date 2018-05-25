@@ -7,23 +7,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2.Controllers
+namespace Hckaton2018v2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class partidoPolitico
+    public partial class presupuesto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public partidoPolitico()
+        public presupuesto()
         {
             this.candidato = new HashSet<candidato>();
+            this.egreso = new HashSet<egreso>();
+            this.programasIngreso = new HashSet<programasIngreso>();
         }
     
-        public int idPartido { get; set; }
-        public string nombre { get; set; }
+        public int idPresupuesto { get; set; }
+        public double prepTotal { get; set; }
+        public int idEstado { get; set; }
+        public string descripcion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<candidato> candidato { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<egreso> egreso { get; set; }
+        public virtual estado estado { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<programasIngreso> programasIngreso { get; set; }
     }
 }

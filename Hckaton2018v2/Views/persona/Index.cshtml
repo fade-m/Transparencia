@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Hckaton2018v2.Controllers.persona>
+﻿@model IEnumerable<Hckaton2018v2.persona>
 
 @{
     Layout = null;
@@ -41,9 +41,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.estado.nombre)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.usuario.usuario1)
-            </th>
             <th></th>
         </tr>
     
@@ -72,9 +69,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.estado.nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.usuario.usuario1)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.idPersona }) |

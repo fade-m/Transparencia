@@ -7,24 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2.Controllers
+namespace Hckaton2018v2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class egreso
+    public partial class tipoUsuario
     {
-        public int idEgreso { get; set; }
-        public int idPresupuesto { get; set; }
-        public int idArchivo { get; set; }
-        public double cantidad { get; set; }
-        public string descripcion { get; set; }
-        public Nullable<int> votosPositivos { get; set; }
-        public Nullable<int> votosNegativos { get; set; }
-        public string latitud { get; set; }
-        public string longitud { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tipoUsuario()
+        {
+            this.usuario = new HashSet<usuario>();
+        }
     
-        public virtual archivo archivo { get; set; }
-        public virtual presupuesto presupuesto { get; set; }
+        public int idTipoUsuario { get; set; }
+        public string tipo { get; set; }
+        public string descripcion { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<usuario> usuario { get; set; }
     }
 }

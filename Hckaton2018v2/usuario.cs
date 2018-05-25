@@ -7,27 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2.Controllers
+namespace Hckaton2018v2
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class estado
+    public partial class usuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public estado()
+        public usuario()
         {
-            this.persona = new HashSet<persona>();
-            this.presupuesto = new HashSet<presupuesto>();
+            this.candidato = new HashSet<candidato>();
         }
     
-        public int idEstado { get; set; }
-        public string nombre { get; set; }
-        public int poblacion { get; set; }
+        public string usuario1 { get; set; }
+        public int idTipoUsuario { get; set; }
+        public string contrasena { get; set; }
+        public int idUsuario { get; set; }
+        public string email { get; set; }
+        public int idPersona { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<persona> persona { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<presupuesto> presupuesto { get; set; }
+        public virtual ICollection<candidato> candidato { get; set; }
+        public virtual persona persona { get; set; }
+        public virtual tipoUsuario tipoUsuario { get; set; }
     }
 }
