@@ -52,8 +52,8 @@ namespace Hckaton2018v2.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idCandidato,idPartido,idUsuario,idTipoCandidato,idPresupuesto")] candidato candidato, 
-            [Bind(Include ="usuario,idTipoUsuario,contrasena,idUsuario,email")] usuario usuario)
+        public ActionResult Create([Bind(Include = "idCandidato,idPartido,idUsuario,idTipoCandidato,idPresupuesto")] candidato candidato,
+            [Bind(Include = "usuario1,idTipoUsuario,contrasena,idUsuario,email")] usuario usuario)
         {
             if (ModelState.IsValid)
             {
