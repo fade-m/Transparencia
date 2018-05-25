@@ -43,6 +43,7 @@ namespace Hckaton2018v2.Controllers
             ViewBag.idPresupuesto = new SelectList(db.presupuesto, "idPresupuesto", "idPresupuesto");
             ViewBag.idTipoCandidato = new SelectList(db.tipoCandidato, "idTipoCandidato", "tipoCandidato1");
             ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1");
+            ViewBag.idTipoUsuario = new SelectList(db.tipoUsuario, "idTipoUsuario", "tipo");
             return View();
         }
 
@@ -51,10 +52,17 @@ namespace Hckaton2018v2.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idCandidato,idPartido,idUsuario,idTipoCandidato,idPresupuesto")] candidato candidato)
+        public ActionResult Create([Bind(Include = "idCandidato,idPartido,idUsuario,idTipoCandidato,idPresupuesto")] candidato candidato,
+            [Bind(Include = "usuario1,idTipoUsuario,contrasena,idUsuario,email")] usuario usuario)
         {
             if (ModelState.IsValid)
             {
+
+                db.usuario.Add(usuario);
+                db.SaveChanges();
+                
+                var id = (from x in db.usuario where x.usuario1 == usuario.usuario1 select x.idUsuario).First();
+                candidato.idUsuario = id;
                 db.candidato.Add(candidato);
                 db.SaveChanges();
                 return RedirectToAction("Index");

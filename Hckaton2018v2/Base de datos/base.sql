@@ -2,14 +2,12 @@ create database db_transparencia;
 
 use db_transparencia;
 
-
 Create table [usuario] (
 	[usuario] Varchar(50) NOT NULL,
 	[idTipoUsuario] Integer NOT NULL,
 	[contrasena] Varchar(15) NOT NULL,
 	[idUsuario] Integer Identity NOT NULL,
 	[email] Varchar(25) NOT NULL,
-	[idPersona] Integer NOT NULL,
 Primary Key  ([idUsuario])
 ) 
 go
@@ -23,6 +21,7 @@ Create table [persona] (
 	[fechaNacimiento] Datetime NOT NULL,
 	[cp] Varchar(15) NOT NULL,
 	[genero] Varchar(15) NOT NULL,
+	[idUsuario] Integer NOT NULL,
 	[idEstado] Integer NOT NULL,
 Primary Key  ([idPersona])
 ) 
@@ -136,9 +135,9 @@ Primary Key  ([idPregunta])
 go
 
 
-Alter table [candidato] add  foreign key([idUsuario]) references [usuario] ([idUsuario]) 
+Alter table [persona] add  foreign key([idUsuario]) references [usuario] ([idUsuario]) 
 go
-Alter table [usuario] add  foreign key([idPersona]) references [persona] ([idPersona]) 
+Alter table [candidato] add  foreign key([idUsuario]) references [usuario] ([idUsuario]) 
 go
 Alter table [usuario] add  foreign key([idTipoUsuario]) references [tipoUsuario] ([idTipoUsuario]) 
 go

@@ -1,41 +1,49 @@
-﻿@model IEnumerable<Hckaton2018v2.archivo>
+﻿@model IEnumerable<Hckaton2018v2.Models.FileNames>
 
-@{
-    Layout = null;
-}
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
 
-<!DOCTYPE html>
+                <div class="page-header text-center">
+                    <h1 style="color:#f3f3ff">Archivos disponibles</h1>
+                </div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ruta)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ruta)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.idArchivo }) |
-                @Html.ActionLink("Details", "Details", new { id=item.idArchivo }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.idArchivo })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+                <h2>Archivos</h2>
+
+                <p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            FileId
+                        </th>
+                        <th>
+                            FileName
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FileId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FileName)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Download", "Download", new { id = item.FileId })
+
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -9,18 +9,18 @@ using System.Web.Mvc;
 
 namespace Hckaton2018v2.Controllers
 {
-    public class usuarioController : Controller
+    public class usuariosController : Controller
     {
         private db_transparenciaEntities db = new db_transparenciaEntities();
 
-        // GET: usuario
+        // GET: usuarios
         public ActionResult Index()
         {
             var usuario = db.usuario.Include(u => u.tipoUsuario);
             return View(usuario.ToList());
         }
 
-        // GET: usuario/Details/5
+        // GET: usuarios/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,16 +35,16 @@ namespace Hckaton2018v2.Controllers
             return View(usuario);
         }
 
-        // GET: usuario/Create
+        // GET: usuarios/Create
         public ActionResult Create()
         {
             ViewBag.idTipoUsuario = new SelectList(db.tipoUsuario, "idTipoUsuario", "tipo");
             return View();
         }
 
-        // POST: usuario/Create
+        // POST: usuarios/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
+        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "usuario1,idTipoUsuario,contrasena,idUsuario,email")] usuario usuario)
@@ -60,7 +60,7 @@ namespace Hckaton2018v2.Controllers
             return View(usuario);
         }
 
-        // GET: usuario/Edit/5
+        // GET: usuarios/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,9 +76,9 @@ namespace Hckaton2018v2.Controllers
             return View(usuario);
         }
 
-        // POST: usuario/Edit/5
+        // POST: usuarios/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
+        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "usuario1,idTipoUsuario,contrasena,idUsuario,email")] usuario usuario)
@@ -93,7 +93,7 @@ namespace Hckaton2018v2.Controllers
             return View(usuario);
         }
 
-        // GET: usuario/Delete/5
+        // GET: usuarios/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,7 +108,7 @@ namespace Hckaton2018v2.Controllers
             return View(usuario);
         }
 
-        // POST: usuario/Delete/5
+        // POST: usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
