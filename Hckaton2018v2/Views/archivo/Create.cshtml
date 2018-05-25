@@ -1,47 +1,41 @@
 ﻿@model Hckaton2018v2.archivo
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    
-    
-    @using (Html.BeginForm()) 
-    {
-        @Html.AntiForgeryToken()
-        
-        <div class="form-horizontal">
-            <h4>archivo</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.ruta, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ruta, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ruta, "", new { @class = "text-danger" })
+
+
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
+
+                <div class="page-header text-center">
+                    <h1 style="color:#f3f3ff">Estados</h1>
                 </div>
-            </div>
-    
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+
+
+                @using (Html.BeginForm("Cargar", "archivo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    // @Html.ValidationSummary("No fue posible crear la Persona") esto es para mostrar el mensaje arriba en general.
+                        <fieldset>
+                            <legend>Formulario de carga de archivos</legend>
+                            <ol>
+                    
+                                <li>
+                                    @*   @Html.TextBox("file", "", new { type = "file" }) *@
+                                    <input type="file" name="archivo" /> <input type="submit" value="Cargar" name="boton" />
+                                </li>
+                            </ol>
+                            
+                        </fieldset>
+                }
+
+                <div>
+                    @Html.ActionLink("Back to List", "Index")
                 </div>
             </div>
         </div>
-    }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Index")
     </div>
-</body>
-</html>
+</section>

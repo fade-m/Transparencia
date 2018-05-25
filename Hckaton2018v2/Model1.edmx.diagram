@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="db_transparenciaModel.persona" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="db_transparenciaModel.pregunta" Width="1.5" PointX="7.5" PointY="16.625" IsExpanded="true" />
         <EntityTypeShape EntityType="db_transparenciaModel.presupuesto" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_transparenciaModel.programasIngreso" Width="1.5" PointX="5.25" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_transparenciaModel.programasIngreso" Width="1.5" PointX="5.5" PointY="20.25" IsExpanded="true" />
         <EntityTypeShape EntityType="db_transparenciaModel.propuestas" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
         <EntityTypeShape EntityType="db_transparenciaModel.tipoCandidato" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
         <EntityTypeShape EntityType="db_transparenciaModel.tipoPropuesta" Width="1.5" PointX="8.25" PointY="20.375" IsExpanded="true" />
