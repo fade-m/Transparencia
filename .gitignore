@@ -338,6 +338,7 @@ Hckaton2018v2/Web.config
 <<<<<<< HEAD
 *.edmx
 Hckaton2018v2/Model1.Designer.cs
+<<<<<<< HEAD
 Hckaton2018v2/Model1.Designer.cs
 Hckaton2018v2/Model1.edmx
 Hckaton2018v2/Model1.edmx.diagram
@@ -351,3 +352,5 @@ Hckaton2018v2/Web.config
 Hckaton2018v2/Web.config
 =======
 >>>>>>> a836fa72003aa68e0fae7404755e1b414bbc0067
+=======
+>>>>>>> parent of 5ff471a... Ignores
