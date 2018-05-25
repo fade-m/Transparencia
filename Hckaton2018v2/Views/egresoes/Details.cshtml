@@ -1,90 +1,91 @@
 ﻿@model Hckaton2018v2.egreso
 
-@{
-    Layout = null;
-}
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
+                <div>
+                    <div class="form-horizontal">
+                        <div class="page-header text-center">
+                            <h1 style="color:#f3f3ff">Egresos</h1>
+                        </div>
+                        <hr />
+                        <dl class="dl-horizontal h5">
 
-<!DOCTYPE html>
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.cantidad)
+                            </dt>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <div>
-        <h4>egreso</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.cantidad)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.cantidad)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.descripcion)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.descripcion)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.votosPositivos)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.votosPositivos)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.votosNegativos)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.votosNegativos)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.latitud)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.latitud)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.longitud)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.longitud)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.archivo.ruta)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.archivo.ruta)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.presupuesto.idPresupuesto)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.presupuesto.idPresupuesto)
-            </dd>
-    
-        </dl>
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.cantidad)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.descripcion)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.descripcion)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.votosPositivos)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.votosPositivos)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.votosNegativos)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.votosNegativos)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.latitud)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.latitud)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.longitud)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.longitud)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.archivo.ruta)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.archivo.ruta)
+                            </dd>
+
+                            <dt class="text-capitalize font-weight-bold">
+                                @Html.DisplayNameFor(model => model.presupuesto.idPresupuesto)
+                            </dt>
+
+                            <dd class="text-light">
+                                @Html.DisplayFor(model => model.presupuesto.idPresupuesto)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p class="h5">
+                        @Html.ActionLink("Editar", "Edit", new { id = Model.idEstado }) |
+                        @Html.ActionLink("Regresar", "Index")
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.idEgreso }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</body>
-</html>
+</section>

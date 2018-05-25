@@ -1,83 +1,88 @@
 ﻿@model IEnumerable<Hckaton2018v2.egreso>
 
-@{
-    Layout = null;
-}
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
 
-<!DOCTYPE html>
+                <div class="page-header text-center">
+                    <h1 style="color:#f3f3ff">Egresos</h1>
+                </div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.cantidad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.descripcion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.votosPositivos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.votosNegativos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.latitud)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.longitud)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.archivo.ruta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.presupuesto.idPresupuesto)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.cantidad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.votosPositivos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.votosNegativos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.latitud)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.longitud)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.archivo.ruta)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.presupuesto.idPresupuesto)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.idEgreso }) |
-                @Html.ActionLink("Details", "Details", new { id=item.idEgreso }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.idEgreso })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+
+                <p>
+                    <h2> @Html.ActionLink("Nuevo Egreso", "Create") </h2>
+                </p>
+                <table class="table table-hover text-center h4">
+                    <thead class="bg-light">
+                        <tr>
+                            <th>
+                               Cantidad
+                            </th>
+                            <th>
+                               Descripción
+                            </th>
+                            <th>
+                              Votos Positivos
+                            </th>
+                            <th>
+                               Votos negativos
+                            </th>
+                            <th>
+                               latitud
+                            </th>
+                            <th>
+                              Longitud
+                            </th>
+                            <th>
+                               Ruta archivo
+                            </th>
+                            <th>
+                               Presupuesto
+                            </th>
+                            <th></th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.cantidad)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.descripcion)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.votosPositivos)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.votosNegativos)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.latitud)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.longitud)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.archivo.ruta)
+                                </td>
+                                <td class="text-light">
+                                    @Html.DisplayFor(modelItem => item.presupuesto.idPresupuesto)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Editar", "Edit", new { id = item.idEgreso }) |
+                                    @Html.ActionLink("Detalles", "Details", new { id = item.idEgreso }) |
+                                    @Html.ActionLink("Eliminar", "Delete", new { id = item.idEgreso })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
