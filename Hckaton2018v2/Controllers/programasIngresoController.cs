@@ -6,22 +6,21 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Hckaton2018v2;
 
 namespace Hckaton2018v2.Controllers
 {
-    public class programasIngresoesController : Controller
+    public class programasIngresoController : Controller
     {
         private db_transparenciaEntities db = new db_transparenciaEntities();
 
-        // GET: programasIngresoes
+        // GET: programasIngreso
         public ActionResult Index()
         {
             var programasIngreso = db.programasIngreso.Include(p => p.presupuesto1);
             return View(programasIngreso.ToList());
         }
 
-        // GET: programasIngresoes/Details/5
+        // GET: programasIngreso/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,16 +35,16 @@ namespace Hckaton2018v2.Controllers
             return View(programasIngreso);
         }
 
-        // GET: programasIngresoes/Create
+        // GET: programasIngreso/Create
         public ActionResult Create()
         {
             ViewBag.idPresupuesto = new SelectList(db.presupuesto, "idPresupuesto", "idPresupuesto");
             return View();
         }
 
-        // POST: programasIngresoes/Create
+        // POST: programasIngreso/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "idProgramaIngreso,presupuesto,idPresupuesto")] programasIngreso programasIngreso)
@@ -61,7 +60,7 @@ namespace Hckaton2018v2.Controllers
             return View(programasIngreso);
         }
 
-        // GET: programasIngresoes/Edit/5
+        // GET: programasIngreso/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,9 +76,9 @@ namespace Hckaton2018v2.Controllers
             return View(programasIngreso);
         }
 
-        // POST: programasIngresoes/Edit/5
+        // POST: programasIngreso/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "idProgramaIngreso,presupuesto,idPresupuesto")] programasIngreso programasIngreso)
@@ -94,7 +93,7 @@ namespace Hckaton2018v2.Controllers
             return View(programasIngreso);
         }
 
-        // GET: programasIngresoes/Delete/5
+        // GET: programasIngreso/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -109,7 +108,7 @@ namespace Hckaton2018v2.Controllers
             return View(programasIngreso);
         }
 
-        // POST: programasIngresoes/Delete/5
+        // POST: programasIngreso/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

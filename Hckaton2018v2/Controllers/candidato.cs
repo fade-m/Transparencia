@@ -7,22 +7,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2
+namespace Hckaton2018v2.Controllers
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tipoPropuesta
+    public partial class candidato
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tipoPropuesta()
+        public candidato()
         {
+            this.pregunta = new HashSet<pregunta>();
             this.propuestas = new HashSet<propuestas>();
         }
     
-        public int idTipoPropuesta { get; set; }
-        public string tipoPropuesta1 { get; set; }
+        public int idCandidato { get; set; }
+        public int idPartido { get; set; }
+        public int idUsuario { get; set; }
+        public int idTipoCandidato { get; set; }
+        public int idPresupuesto { get; set; }
     
+        public virtual partidoPolitico partidoPolitico { get; set; }
+        public virtual presupuesto presupuesto { get; set; }
+        public virtual tipoCandidato tipoCandidato { get; set; }
+        public virtual usuario usuario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<pregunta> pregunta { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<propuestas> propuestas { get; set; }
     }

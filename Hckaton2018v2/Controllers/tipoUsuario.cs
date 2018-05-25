@@ -7,23 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2
+namespace Hckaton2018v2.Controllers
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tipoCandidato
+    public partial class tipoUsuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tipoCandidato()
+        public tipoUsuario()
         {
-            this.candidato = new HashSet<candidato>();
+            this.usuario = new HashSet<usuario>();
         }
     
-        public int idTipoCandidato { get; set; }
-        public string tipoCandidato1 { get; set; }
+        public int idTipoUsuario { get; set; }
+        public string tipo { get; set; }
+        public string descripcion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<candidato> candidato { get; set; }
+        public virtual ICollection<usuario> usuario { get; set; }
     }
 }

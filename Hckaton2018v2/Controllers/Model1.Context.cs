@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hckaton2018v2
+namespace Hckaton2018v2.Controllers
 {
     using System;
     using System.Data.Entity;

@@ -1,4 +1,4 @@
-﻿@model Hckaton2018v2.programasIngreso
+﻿@model Hckaton2018v2.Controllers.programasIngreso
 
 @{
     Layout = null;
@@ -12,10 +12,6 @@
     <title>Create</title>
 </head>
 <body>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    
-    
     @using (Html.BeginForm()) 
     {
         @Html.AntiForgeryToken()
