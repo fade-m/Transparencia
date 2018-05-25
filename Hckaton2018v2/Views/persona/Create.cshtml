@@ -1,0 +1,108 @@
+﻿@model Hckaton2018v2.persona
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+
+<section class="wellcome_area clearfix" id="home">
+    <div class="container h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col-12 col-md">
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+
+
+                    <div class="form-horizontal">
+                        <h4>persona</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.apPaterno, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.apPaterno, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.apPaterno, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.apMaterno, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.apMaterno, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.apMaterno, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.direccion, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.direccion, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.direccion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.fechaNacimiento, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.fechaNacimiento, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.fechaNacimiento, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.cp, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.cp, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.cp, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.genero, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.genero, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.genero, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.idUsuario, "idUsuario", htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("idUsuario", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.idUsuario, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.idEstado, "idEstado", htmlAttributes: new { @class = "control-label col-md-2 text-capitalize font-weight-bold" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("idEstado", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.idEstado, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="h5">
+                    @Html.ActionLink("Regresar", "Index")
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
