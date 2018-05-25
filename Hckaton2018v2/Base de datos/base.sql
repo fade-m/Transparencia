@@ -79,6 +79,7 @@ Create table [programasIngreso] (
 	[idProgramaIngreso] Integer Identity NOT NULL,
 	[presupuesto] Float NOT NULL,
 	[idPresupuesto] Integer NOT NULL,
+	[descripcion] Varchar(100) NULL,
 Primary Key  ([idProgramaIngreso])
 ) 
 go
