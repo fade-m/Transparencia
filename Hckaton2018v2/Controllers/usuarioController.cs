@@ -10,116 +10,112 @@ using Hckaton2018v2;
 
 namespace Hckaton2018v2.Controllers
 {
-    public class personasController : Controller
+    public class usuarioController : Controller
     {
         private db_transparenciaEntities db = new db_transparenciaEntities();
 
-        // GET: personas
+        // GET: usuario
         public ActionResult Index()
         {
-            var persona = db.persona.Include(p => p.estado).Include(p => p.usuario);
-            return View(persona.ToList());
+            var usuario = db.usuario.Include(u => u.tipoUsuario);
+            return View(usuario.ToList());
         }
 
-        // GET: personas/Details/5
+        // GET: usuario/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            persona persona = db.persona.Find(id);
-            if (persona == null)
+            usuario usuario = db.usuario.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(usuario);
         }
 
-        // GET: personas/Create
+        // GET: usuario/Create
         public ActionResult Create()
         {
-            ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre");
-            ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1");
+            ViewBag.idTipoUsuario = new SelectList(db.tipoUsuario, "idTipoUsuario", "tipo");
             return View();
         }
 
-        // POST: personas/Create
+        // POST: usuario/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idPersona,nombre,apPaterno,apMaterno,direccion,fechaNacimiento,cp,genero,idUsuario,idEstado")] persona persona)
+        public ActionResult Create([Bind(Include = "usuario1,idTipoUsuario,contrasena,idUsuario,email")] usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                db.persona.Add(persona);
+                db.usuario.Add(usuario);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre", persona.idEstado);
-            ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1", persona.idUsuario);
-            return View(persona);
+            ViewBag.idTipoUsuario = new SelectList(db.tipoUsuario, "idTipoUsuario", "tipo", usuario.idTipoUsuario);
+            return View(usuario);
         }
 
-        // GET: personas/Edit/5
+        // GET: usuario/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            persona persona = db.persona.Find(id);
-            if (persona == null)
+            usuario usuario = db.usuario.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre", persona.idEstado);
-            ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1", persona.idUsuario);
-            return View(persona);
+            ViewBag.idTipoUsuario = new SelectList(db.tipoUsuario, "idTipoUsuario", "tipo", usuario.idTipoUsuario);
+            return View(usuario);
         }
 
-        // POST: personas/Edit/5
+        // POST: usuario/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idPersona,nombre,apPaterno,apMaterno,direccion,fechaNacimiento,cp,genero,idUsuario,idEstado")] persona persona)
+        public ActionResult Edit([Bind(Include = "usuario1,idTipoUsuario,contrasena,idUsuario,email")] usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(persona).State = EntityState.Modified;
+                db.Entry(usuario).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.idEstado = new SelectList(db.estado, "idEstado", "nombre", persona.idEstado);
-            ViewBag.idUsuario = new SelectList(db.usuario, "idUsuario", "usuario1", persona.idUsuario);
-            return View(persona);
+            ViewBag.idTipoUsuario = new SelectList(db.tipoUsuario, "idTipoUsuario", "tipo", usuario.idTipoUsuario);
+            return View(usuario);
         }
 
-        // GET: personas/Delete/5
+        // GET: usuario/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            persona persona = db.persona.Find(id);
-            if (persona == null)
+            usuario usuario = db.usuario.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(usuario);
         }
 
-        // POST: personas/Delete/5
+        // POST: usuario/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            persona persona = db.persona.Find(id);
-            db.persona.Remove(persona);
+            usuario usuario = db.usuario.Find(id);
+            db.usuario.Remove(usuario);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
